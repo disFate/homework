@@ -1,20 +1,14 @@
 # Twitter APIs
 
----
-
 This is a test for Twitter APIs, including get twitter, search twitter and botometer to check if the user is a bot. You can use postman to test  the api or use the demo code on Github served by Twitter.
 
 ## Prerequisites
-
----
 
 * Sign up for Twitter developer account and receive approval
 * Create a Project and an associated developer App in the developer portal.
 * Navigate to your App's “Keys and tokens” page to generate the required credentials 
 
 ## environment set up
-
----
 
 * You need to install some packages at first by using this command in terminal.
 
@@ -43,8 +37,6 @@ This is a test for Twitter APIs, including get twitter, search twitter and botom
 	```
 
 ## APIs
-
----
 
 ### Get Twitters:
 
