@@ -29,6 +29,6 @@ search_url = "https://api.twitter.com/2/tweets/search/recent"
 query_params = {'query': 'Kevin Durant', 'tweet.fields': 'author_id', 'max_results': 50}
 ```
 
-<img src="C:\Users\Tsuna\AppData\Roaming\Typora\typora-user-images\image-20221016221449133.png" alt="image-20221016221449133" style="zoom:50%;" />
+![result](C:\Users\Tsuna\Desktop\homework\homework\EC601\project2\result.png)
 
 we can see that the positive news about Kevin Durant is more than negative one
