@@ -6,7 +6,7 @@ twitter_app_auth = {
     'consumer_secret': 'xxxxxxxxxx',
     'access_token': 'xxxxxxxxx',
     'access_token_secret': 'xxxxxxxxxxx',
-  }
+}
 bom = botometer.Botometer(wait_on_ratelimit=True,
                           rapidapi_key=rapidapi_key,
                           **twitter_app_auth)

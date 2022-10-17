@@ -4,13 +4,7 @@ import json
 
 # To set your environment variables in your terminal run the following line:
 # export 'BEARER_TOKEN'='<your_bearer_token>'
-bearer_token = "AAAAAAAAAAAAAAAAAAAAAOv7iAEAAAAAWE96Qneu0qTxbH3QnYkEMdIzC%2B0%3D78O8hVSJjb8A5D9WOaKj5woB5sMxn6ZHpxuFzYKrDx8ivgap8S"
-
-search_url = "https://api.twitter.com/2/tweets/search/recent"
-
-# Optional params: start_time,end_time,since_id,until_id,max_results,next_token,
-# expansions,tweet.fields,media.fields,poll.fields,place.fields,user.fields
-query_params = {'query': 'American','tweet.fields': 'author_id', 'max_results': 100}
+bearer_token = os.getenv('BEARER_TOKEN')
 
 
 def bearer_oauth(r):
@@ -22,6 +16,7 @@ def bearer_oauth(r):
     r.headers["User-Agent"] = "v2RecentSearchPython"
     return r
 
+
 def connect_to_endpoint(url, params):
     response = requests.get(url, auth=bearer_oauth, params=params)
     print(response.status_code)
@@ -31,6 +26,10 @@ def connect_to_endpoint(url, params):
 
 
 def main():
+    search_url = "https://api.twitter.com/2/tweets/search/recent"
+    # Optional params: start_time,end_time,since_id,until_id,max_results,next_token,
+    # expansions,tweet.fields,media.fields,poll.fields,place.fields,user.fields
+    query_params = {'query': 'American', 'tweet.fields': 'author_id', 'max_results': 100}
     json_response = connect_to_endpoint(search_url, query_params)
     print(json.dumps(json_response, indent=4, sort_keys=True))
 
